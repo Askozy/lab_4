@@ -1,0 +1,168 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'CalifornianFB', sans-serif;
+  background-color: #000000;
+}
+.textmiddleearth {
+    
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
+.textmiddleearth2 {
+    margin: 100px 250px;
+
+}
+.tolken {
+    margin: 20px 550px;
+    display: block;
+}
+@font-face {
+	font-family: 'CalifornianFB';
+	src: url('./CalifornianFB.eot');
+	src: local('CalifornianFB'), url('./CalifornianFB.woff') format('woff'), url('./CalifornianFB.ttf') format('truetype');
+} 
+.textmiddleearth3 {
+    margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.end {
+    margin-left: 400px;
+}
+.elf_text {
+    width: 90%;
+    margin: 30px auto 0;
+    display: block;
+}
+.ring_text {
+    text-align: center;
+    font-size: 36px;
+    position: absolute;
+
+}
+.fon {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.backgroung_fog {
+    
+    position: relative;
+}
+
+/*Туманнннннннннннн***********************/
+.fog {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: url("background.jpg") center center;  
+    
+    background-size: cover;
+}
+.lor_map {
+    margin: 0 auto;
+    display: block;
+}
+.fog::before,
+.fog::after,
+.fog div::before, 
+.fog div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.fog div::before, 
+.fog div::after    {
+    left: 100%;
+}
+.fog::before, 
+.fog div::before {
+    background-image: url("/images/fog-1.png");
+    animation: fogmove 20s linear 0s infinite;
+}
+.fog::after, 
+.fog div::after {
+    background-image: url("/images/fog-2.png");
+    animation: fogmove 10s linear 0s infinite;
+}
+@keyframes fogmove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+/*квадраттт*/
+
+.stage {
+    border-bottom: 3px solid #444;
+    display: flex;
+    height: 430px;
+    width: 100%;
+    position: absolute;
+}
+.box {
+    align-self: flex-end;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    height: 348px;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    position: absolute;
+    width: 227px;
+    z-index: 2;
+}
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease-in-out;
+}
+@keyframes bounce-2 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
